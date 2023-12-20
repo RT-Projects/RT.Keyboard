@@ -2,7 +2,7 @@
 using System.Runtime.InteropServices;
 using Timer = System.Windows.Forms.Timer;
 
-namespace RT.Util;
+namespace RT.Keyboard;
 
 /// <summary>Manages a global low-level keyboard hook.</summary>
 public sealed class GlobalKeyboardListener : IDisposable

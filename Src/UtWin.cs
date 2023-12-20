@@ -1,9 +1,9 @@
 using System.Runtime.InteropServices;
 
-namespace RT.Util;
+namespace RT.Keyboard;
 
 /// <summary>Offers some Windows-specific static functions which are hard to categorize under any more specific classes.</summary>
-public static partial class UtWin
+public static class UtWin
 {
     /// <summary>
     ///     Sends the specified sequence of key strokes to the active application. See remarks for details.</summary>

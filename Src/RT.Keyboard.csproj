@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>net481;net8.0-windows</TargetFrameworks>
+		<UseWindowsForms>true</UseWindowsForms>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<DocumentationFile>$(OutputPath)\$(AssemblyName).xml</DocumentationFile>
+		<LangVersion>latest</LangVersion>
+
+		<Version>1.0.0.9999</Version>
+		<Authors>rstarkov;Timwi</Authors>
+		<Description>GlobalKeyboardListener and other keyboard-related utilities.</Description>
+		<PackageTags>rt.keyboard;GlobalKeyboardListener</PackageTags>
+	</PropertyGroup>
+
+</Project>
