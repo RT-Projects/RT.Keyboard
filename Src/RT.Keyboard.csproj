@@ -6,6 +6,8 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<DocumentationFile>$(OutputPath)\$(AssemblyName).xml</DocumentationFile>
 		<LangVersion>latest</LangVersion>
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>embedded</DebugType>
 
 		<Authors>rstarkov;Timwi</Authors>
 		<Description>GlobalKeyboardListener and other keyboard-related utilities.</Description>
