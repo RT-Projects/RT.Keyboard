@@ -34,6 +34,7 @@ static class WinAPI
     public const int INPUT_KEYBOARD = 1;
     public const int INPUT_HARDWARE = 2;
 
+#pragma warning disable 0649 // field is never assigned
     public struct KeyboardHookStruct
     {
         public int vkCode;
