@@ -154,7 +154,7 @@ public sealed class GlobalKeyboardListener : IDisposable
         recheckPossibleSwallowedKeys();
         _afterLockTimer.Start();
         // All of this key swallowing on lock/unlock means that Up/Down events from this Global Keyboard Listener are not always paired correctly.
-        // We do not attempt to emulate the swallowed events even for the modifier keys (which are easier because we track their state already).
+        // recheckPossibleSwallowedKeys() will send fake KeyUp events to mitigate against this.
     }
 
     private void recheckPossibleSwallowedKeysTimer(object sender, EventArgs e)
