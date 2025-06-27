@@ -166,13 +166,29 @@ public sealed class GlobalKeyboardListener : IDisposable
     private void recheckPossibleSwallowedKeys()
     {
         if (_ctrl && WinAPI.GetKeyState((int) Keys.LControlKey) >= 0 && WinAPI.GetKeyState((int) Keys.RControlKey) >= 0)
+        {
             _ctrl = false;
+            KeyUp(this, new GlobalKeyEventArgs(Keys.LControlKey, 0, new ModifierKeysState(_ctrl, _alt, _shift, _win)));
+            KeyUp(this, new GlobalKeyEventArgs(Keys.RControlKey, 0, new ModifierKeysState(_ctrl, _alt, _shift, _win)));
+        }
         if (_alt && WinAPI.GetKeyState((int) Keys.LMenu) >= 0 && WinAPI.GetKeyState((int) Keys.RMenu) >= 0)
+        {
             _alt = false;
+            KeyUp(this, new GlobalKeyEventArgs(Keys.LMenu, 0, new ModifierKeysState(_ctrl, _alt, _shift, _win)));
+            KeyUp(this, new GlobalKeyEventArgs(Keys.RMenu, 0, new ModifierKeysState(_ctrl, _alt, _shift, _win)));
+        }
         if (_shift && WinAPI.GetKeyState((int) Keys.LShiftKey) >= 0 && WinAPI.GetKeyState((int) Keys.RShiftKey) >= 0)
+        {
             _shift = false;
+            KeyUp(this, new GlobalKeyEventArgs(Keys.LShiftKey, 0, new ModifierKeysState(_ctrl, _alt, _shift, _win)));
+            KeyUp(this, new GlobalKeyEventArgs(Keys.RShiftKey, 0, new ModifierKeysState(_ctrl, _alt, _shift, _win)));
+        }
         if (_win && WinAPI.GetKeyState((int) Keys.LWin) >= 0 && WinAPI.GetKeyState((int) Keys.RWin) >= 0)
+        {
             _win = false;
+            KeyUp(this, new GlobalKeyEventArgs(Keys.LWin, 0, new ModifierKeysState(_ctrl, _alt, _shift, _win)));
+            KeyUp(this, new GlobalKeyEventArgs(Keys.RWin, 0, new ModifierKeysState(_ctrl, _alt, _shift, _win)));
+        }
     }
 }
 
